@@ -1,0 +1,28 @@
+{
+  "name": "q6tech.com",
+  "version": "1.0.0",
+  "repository": "git@github.com:q6tech/q6tech.com.git",
+  "author": "Mark Lopez <m@silvenga.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "parcel build src/**/*.html",
+    "postbuild": "cp src/robots.txt dist/robots.txt && cp src/.htaccess dist/.htaccess",
+    "start": "parcel serve --no-autoinstall src/**/*.html"
+  },
+  "targets": {
+    "app": {
+      "distDir": "./dist"
+    }
+  },
+  "browserslist": "defaults",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
+    "parcel": "^2.0.0-beta.3.1",
+    "sass": "^1.36.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "typeface-lato": "^1.1.13"
+  }
+}

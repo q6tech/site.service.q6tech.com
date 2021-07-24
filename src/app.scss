@@ -1,0 +1,48 @@
+// @import 'normalize.css/normalize.css';
+@import 'typeface-lato/index.css';
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    text-align: center;
+}
+
+#maintitle {
+    /*width: 300px;*/
+    margin: 100px auto 0;
+    font-size: 5em;
+    font-weight: 100;
+}
+
+#subtitle {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+::selection {
+    background: #bababa;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.typing::after {
+    content: "|";
+}
+
+.waiting::after {
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
