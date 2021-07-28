@@ -1,4 +1,4 @@
-// @import 'normalize.css/normalize.css';
+@import 'normalize.css/normalize.css';
 @import 'typeface-lato/index.css';
 
 body {
@@ -8,15 +8,15 @@ body {
 }
 
 #maintitle {
-    /*width: 300px;*/
     margin: 100px auto 0;
     font-size: 5em;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 #subtitle {
     margin-top: 10px;
     font-size: 1.5em;
+    font-weight: 300;
 }
 
 ::selection {
@@ -33,6 +33,10 @@ body {
 
 .waiting::after {
     animation: 1s blink step-end infinite;
+}
+
+.hidden {
+    opacity: 0;
 }
 
 @keyframes blink {

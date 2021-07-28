@@ -2,26 +2,45 @@ function delay(ms: number) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function type(elementId: string, text: string) {
-    var element = document.getElementById(elementId);
-    element.innerHTML = "";
+async function type(element: HTMLElement, text: string) {
     for (var i = 0; i < text.length; i++) {
         await key(text[i], element);
     }
 }
 
-async function key(charactor, element: HTMLElement) {
-    var isCommand = charactor === "+" || charactor === "^";
-    element.className = isCommand ? charactor === "^" ? "" : "waiting typing" : "typing";
-    element.innerHTML = charactor === "-" ? element.innerHTML.slice(0, -1) : element.innerHTML += isCommand ? "" : charactor;
-
+async function key(charactor: string, element: HTMLElement) {
+    switch (charactor) {
+        case "+":
+            // Pause
+            element.className = "waiting typing";
+            break;
+        case "-":
+            // Backspace
+            element.className = "typing";
+            element.innerHTML = element.innerHTML.slice(0, -1);
+            break;
+        case "^":
+            // New line
+            element.className = "";
+            break;
+        default:
+            element.className = "typing";
+            element.innerHTML = element.innerHTML + charactor;
+    }
     await delay(100);
 }
 
 (async function () {
-    var title = "++++++++q6tech+--++com^";
-    var sub = "contact++-++@++q6tech.com+";
+    var title = "++++Quality+++++--+---+-6++++ Tech+nolog++ies+++^";
+    var sub = "contacr++-+t+@++q6tech.com+";
 
-    await type("maintitle", title);
-    await type("subtitle", sub);
+    var mainTitleElement = document.getElementById("maintitle");
+    var subTitleElement = document.getElementById("subtitle");
+
+    mainTitleElement.textContent = "";
+    subTitleElement.textContent = "";
+    document.body.className = "";
+
+    await type(mainTitleElement, title);
+    await type(subTitleElement, sub);
 }());
