@@ -30,7 +30,7 @@ async function key(charactor: string, element: HTMLElement) {
     await delay(100);
 }
 
-(async function () {
+async function main() {
     var title = "++++Quality+++++--+---+-6++++ Tech+nolog++ies+++^";
     var sub = "contacr++-+t+@++q6tech.com+";
 
@@ -43,4 +43,6 @@ async function key(charactor: string, element: HTMLElement) {
 
     await type(mainTitleElement, title);
     await type(subTitleElement, sub);
-}());
+};
+
+main();
