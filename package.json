@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "build": "parcel build src/**/*.html",
-    "postbuild": "cp src/robots.txt dist/robots.txt && cp src/.htaccess dist/.htaccess",
+    "postbuild": "cp src/robots.txt dist/robots.txt && cp src/CNAME dist/CNAME",
     "start": "parcel serve --no-autoinstall src/**/*.html"
   },
   "targets": {
