@@ -20,14 +20,8 @@
     <meta name="description" content="Quality consulting and bespoke software development." />
     <meta property="og:description" content="Quality consulting and bespoke software development." />
 
-    <script type="module">
-        const configuredTheme = localStorage.getItem("theme");
-        if (configuredTheme) {
-            document.documentElement.classList.add(configuredTheme);
-        }
-    </script>
-
-    <script async src="./main.tsx" type="module" />
+    <link href="./main.tsx" rel="preload" as="script" />
+    <script src="./main.tsx" type="module"></script>
 </head>
 
 <body class="overflow-hidden">

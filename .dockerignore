@@ -2,3 +2,4 @@ node_modules/
 .github/
 README.md
 .ignore
+.parcel-cache/
