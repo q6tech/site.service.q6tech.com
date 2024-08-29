@@ -1,21 +1,13 @@
 import type { Config } from "tailwindcss";
 import Typography from "@tailwindcss/typography";
-import HighlightJs from "tailwind-highlightjs";
+import Animated from "tailwindcss-animated";
+import Transforms from "@xpd/tailwind-3dtransforms";
 
 export default {
     content: [
-        // TODO, maybe not the src directory. Not sure if matters.
-        // "./src/**/*.{html,js,ts,jsx,tsx}",
-        "./.cache/eleventy/**/*.html",
+        "./src/**/*.{html,js,ts,jsx,tsx}",
     ],
-    darkMode: ["variant", [
-        "@media (prefers-color-scheme: dark) { &:not(.light, .light *) }",
-        "&:is(.dark, .dark *)",
-    ]],
     theme: {
-        hljs: {
-            theme: "github-dark-dimmed",
-        },
         extend: {
             fontFamily: {
                 sans: [
@@ -26,11 +18,15 @@ export default {
                     // Emotes
                     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
                 ],
+                brand: [
+                    "Rosario Variable"
+                ],
             },
         },
     },
     plugins: [
         Typography,
-        HighlightJs
+        Animated,
+        Transforms
     ],
 } satisfies Config

@@ -285,6 +285,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource-variable/rosario@npm:^5.0.15":
+  version: 5.0.15
+  resolution: "@fontsource-variable/rosario@npm:5.0.15"
+  checksum: 10/4bdda1f1db174ccb4c3806716e67902a15e7362f53840ef1aae6cf2aa7612c0cc33f63e7216bd5ceb6d20d058586e28ef11aa057a403bf579958c96ef77f5e77
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/module-importer@npm:^1.0.1":
   version: 1.0.1
   resolution: "@humanwhocodes/module-importer@npm:1.0.1"
@@ -1416,6 +1423,7 @@ __metadata:
   dependencies:
     "@eslint/js": "npm:^9.9.1"
     "@fontsource-variable/inter": "npm:^5.0.20"
+    "@fontsource-variable/rosario": "npm:^5.0.15"
     "@parcel/optimizer-data-url": "npm:2.12.0"
     "@parcel/packager-raw-url": "npm:2.12.0"
     "@parcel/reporter-bundle-analyzer": "npm:2.12.0"
@@ -1425,6 +1433,7 @@ __metadata:
     "@types/eslint__js": "npm:^8.42.3"
     "@types/react": "npm:^18.3.4"
     "@types/react-dom": "npm:^18.3.0"
+    "@xpd/tailwind-3dtransforms": "npm:^1.0.3"
     clsx: "npm:^2.1.1"
     concurrently: "npm:^8.2.2"
     cross-env: "npm:^7.0.3"
@@ -1444,8 +1453,10 @@ __metadata:
     process: "npm:^0.11.10"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
+    react-icons: "npm:^5.3.0"
     rimraf: "npm:^6.0.1"
     tailwindcss: "npm:^3.4.10"
+    tailwindcss-animated: "npm:^1.1.2"
     tsx: "npm:^4.19.0"
     typescript: "npm:^5.5.4"
     typescript-eslint: "npm:8.3.0"
@@ -1850,6 +1861,13 @@ __metadata:
     "@typescript-eslint/types": "npm:8.3.0"
     eslint-visitor-keys: "npm:^3.4.3"
   checksum: 10/4ee45dd25891d5677b8d4aaab23234a9d1fe8af3d8e39d7777b3a4cfb6aa61fabc13623d8596c11e6140f9129dc9ad7e6bb6f48a4c8c40704018ddd5beafd6c2
+  languageName: node
+  linkType: hard
+
+"@xpd/tailwind-3dtransforms@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@xpd/tailwind-3dtransforms@npm:1.0.3"
+  checksum: 10/ee40d813505d8f54d4b8fcafde82ab19091126e7a0bd2aae14b63eddcf4a7d133059f52f771813d9464a559590ea64076d3be48b16fda93e30c1ee855a6d5a16
   languageName: node
   linkType: hard
 
@@ -5831,6 +5849,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "react-icons@npm:5.3.0"
+  peerDependencies:
+    react: "*"
+  checksum: 10/7f315d2a5e0eee7fefe01eac5cbe818b9592d88964f6c99ba454539a78cd2efd4430152e88113585c5a54bca6a5e1e7e7978df9cf69a03d8479a8d3d106a027c
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -6571,6 +6598,15 @@ __metadata:
   bin:
     svgo: bin/svgo
   checksum: 10/2b74544da1a9521852fe2784252d6083b336e32528d0e424ee54d1613f17312edc7020c29fa399086560e96cba42ede4a2205328a08edeefa26de84cd769a64a
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animated@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "tailwindcss-animated@npm:1.1.2"
+  peerDependencies:
+    tailwindcss: ">=3.1.0"
+  checksum: 10/7be79c9ba3d28fb55df3514de4d5a53a40aa55764c6cbd2de8f8b9a3bc06861ef7b589f3290fec373d276b574ef385afe2294cfcece2206add3a7079804ffe1e
   languageName: node
   linkType: hard
 

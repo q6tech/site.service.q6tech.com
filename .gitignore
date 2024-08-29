@@ -1,6 +1,6 @@
 node_modules/
 dist/
-.cache/
+.parcel-cache/
 
 .pnp.*
 .yarn/*
@@ -9,3 +9,5 @@ dist/
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+src/assets/tmp/
