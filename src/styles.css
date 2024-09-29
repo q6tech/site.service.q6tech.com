@@ -43,28 +43,11 @@
 }
 
 @layer components {
-
-    @property --property-name {
-        syntax: "<color>";
-        inherits: false;
-        initial-value: #c0ffee;
-    }
-
     .hero-bold-text {
         @apply text-transparent inline-block;
         background: linear-gradient(to top right, #374151, #6d28d9);
         background-clip: text;
     }
-
-    @keyframes hero-bold-text {
-        from {
-            --pos: 100%;
-        }
-        to {
-            --pos: 100%;
-        }
-    }
-
     .area-card-subtitle-bg {
         @apply bg-white/90 backdrop-blur-xl h-24 w-64 border-t;
         transform: rotate(-18deg);
