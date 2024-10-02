@@ -1,13 +1,19 @@
 import { useMemo } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { DefaultLayout } from "../layouts/default/default-layout";
 import { LandingPage } from "./landing/landing-page";
 
 function createRouter() {
     return createBrowserRouter([
         {
-            path: "/",
-            element: <LandingPage />,
-        },
+            element: <DefaultLayout />,
+            children: [
+                {
+                    path: "/",
+                    element: <LandingPage />,
+                },
+            ]
+        }
     ])
 }
 
