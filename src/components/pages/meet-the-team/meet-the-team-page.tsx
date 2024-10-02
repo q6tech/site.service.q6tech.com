@@ -74,9 +74,9 @@ type MemberProps = {
 
 function Member({ name, title, email, image, description }: MemberProps) {
     return (
-        <div className="w-full flex mb-6">
+        <section className="w-full flex mb-6">
 
-            <div className="shrink-0 w-32 h-32 rounded-md border px-3 pt-3 bg-blue-100">
+            <div className="shrink-0 w-32 h-32 rounded-xl border px-3 pt-3 bg-blue-100">
                 <img className="w-full h-full" src={image.toString()} alt={`${name}'s headshot.`} />
             </div>
 
@@ -87,6 +87,6 @@ function Member({ name, title, email, image, description }: MemberProps) {
                 {description}
             </div>
 
-        </div>
+        </section>
     )
 }

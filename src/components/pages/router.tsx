@@ -5,6 +5,7 @@ import { LandingPage } from "./landing/landing-page";
 import { MeetTheTeamPage } from "./meet-the-team/meet-the-team-page";
 import { NotFoundPage } from "./not-found/not-found-page";
 import { RootLayout } from "../layouts/root/root-layout";
+import { ContactUsPage } from "./contact-us/contact-us-page";
 
 function createRouter() {
     return createBrowserRouter([
@@ -27,6 +28,13 @@ function createRouter() {
                             element: <MeetTheTeamPage />,
                             handle: {
                                 title: "Meet the Team"
+                            } satisfies RouteContextProps
+                        },
+                        {
+                            path: "/contact-us",
+                            element: <ContactUsPage />,
+                            handle: {
+                                title: "Contact Us"
                             } satisfies RouteContextProps
                         },
                         {

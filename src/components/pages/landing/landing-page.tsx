@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 export function LandingPage() {
     return (
@@ -21,9 +22,9 @@ function Hero() {
                         It's in the name.
                     </div>
                     <Areas />
-                    <a className="px-6 py-3 rounded-2xl bg-purple-900 text-white mx-auto mt-12 transition-colors hover:bg-purple-800"
-                        href="#"
-                        role="button">Contact Us</a>
+                    <Link className="px-6 py-3 rounded-2xl bg-purple-900 text-white mx-auto mt-12 transition-colors hover:bg-purple-800"
+                        to="/contact-us"
+                        role="button">Contact Us</Link>
                 </div>
             </div>
         </div>
