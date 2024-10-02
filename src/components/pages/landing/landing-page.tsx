@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 export function LandingPage() {
     return (
-        <main className="min-h-screen flex flex-col bg-white overflow-hidden relative z-10">
+        <main className="min-h-screen flex flex-col bg-white">
             <Hero />
         </main>
     );
@@ -13,21 +13,18 @@ function Hero() {
     return (
         <div className="flex flex-col h-full min-h-fit mt-24">
             <div className="grow flex justify-center items-center">
-                <div className="flex flex-col rounded-lg">
-                    <div className="text-8xl text-gray-950 text-center animate-fade animate-ease-in-out">
-                        Be <span className="font-bold hero-bold-text">Bold!</span>
+                <div className="flex flex-col rounded-lg items-center">
+                    <div className="text-6xl text-gray-950 text-center animate-fade animate-ease-in-out">
+                        Quality in Engineering
                     </div>
-                    <div className="text-3xl text-center text-gray-600 ms-32 animate-fade animate-ease-in-out animate-delay-300">
-                        Let us help.
+                    <div className="text-2xl text-end text-gray-600 mt-2 animate-fade animate-ease-in-out animate-delay-300">
+                        It's in the name.
                     </div>
                     <Areas />
                     <a className="px-6 py-3 rounded-2xl bg-purple-900 text-white mx-auto mt-12 transition-colors hover:bg-purple-800"
                         href="#"
                         role="button">Contact Us</a>
                 </div>
-            </div>
-            <div className="mt-auto p-6">
-                <p className="text-center text-gray-600">Quality in engineering.</p>
             </div>
         </div>
     )

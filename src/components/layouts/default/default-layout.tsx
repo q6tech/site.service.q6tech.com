@@ -4,10 +4,10 @@ import { useOutlet } from "react-router-dom";
 export function DefaultLayout() {
     const outlet = useOutlet();
     return (
-        <div className="overflow-auto h-screen">
+        <div className="overflow-auto h-screen bg-white">
             <Nav />
             {/* New stacking context */}
-            <main className="relative z-10">
+            <main className="relative z-10 pt-24">
                 {outlet}
             </main>
             <Footer />
