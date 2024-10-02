@@ -2,9 +2,9 @@ import clsx from "clsx";
 
 export function LandingPage() {
     return (
-        <main className="min-h-screen flex flex-col bg-white">
+        <div className="flex flex-col">
             <Hero />
-        </main>
+        </div>
     );
 }
 
