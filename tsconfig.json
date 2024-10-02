@@ -10,6 +10,11 @@
         "target": "ESNext",
         "moduleResolution": "Node",
         "jsx": "react-jsx",
-        "isolatedModules": true
+        "isolatedModules": true,
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
     }
 }
