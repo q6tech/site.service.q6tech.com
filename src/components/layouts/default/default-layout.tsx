@@ -8,7 +8,7 @@ export function DefaultLayout() {
         <div className="overflow-auto h-screen bg-white">
             <Nav />
             {/* New stacking context */}
-            <main className="relative z-10 pt-24 min-h-screen bg-white">
+            <main className="relative z-10 pt-28 min-h-screen bg-white container mx-auto p-6">
                 {outlet}
             </main>
             <Footer />

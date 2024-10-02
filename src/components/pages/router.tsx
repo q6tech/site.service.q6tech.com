@@ -1,10 +1,10 @@
 import { useMemo } from "react";
-import { RouterProvider, ScrollRestoration, createBrowserRouter, useMatches, useOutlet } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { DefaultLayout } from "../layouts/default/default-layout";
 import { LandingPage } from "./landing/landing-page";
 import { MeetTheTeamPage } from "./meet-the-team/meet-the-team-page";
-import { Helmet } from "react-helmet-async";
 import { NotFoundPage } from "./not-found/not-found-page";
+import { RootLayout } from "../layouts/root/root-layout";
 
 function createRouter() {
     return createBrowserRouter([
@@ -50,38 +50,6 @@ export function Router() {
     )
 }
 
-export function RootLayout() {
-
-    const matches = useMatches();
-
-    const routeContext = useMemo(() => {
-        const routesWithContext = matches.filter(x => !!x.handle);
-        if (routesWithContext.length > 1) {
-            console.warn("Multiple matches with context were detected for the current route. This isn't supported.");
-        }
-        if (routesWithContext.length == 1) {
-            return routesWithContext[0].handle as RouteContextProps;
-        }
-        return undefined;
-    }, [...matches]);
-
-    const title = useMemo(
-        () => routeContext?.title ? `${routeContext.title} | Q6 Technologies` : "Q6 Technologies",
-        [routeContext?.title]
-    );
-    const outlet = useOutlet();
-
-    return (
-        <>
-            <Helmet>
-                <title>{title}</title>
-            </Helmet>
-            <ScrollRestoration />
-            {outlet}
-        </>
-    )
-}
-
-type RouteContextProps = {
+export type RouteContextProps = {
     title?: string;
 }
