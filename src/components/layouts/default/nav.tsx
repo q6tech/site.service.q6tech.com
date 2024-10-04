@@ -3,7 +3,7 @@ import { FaPaperPlane, FaPeoplePulling } from "react-icons/fa6";
 import { TbMenu2 } from "react-icons/tb";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Button } from "@/lib/ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerPortal, DrawerTitle, DrawerTrigger } from "@/lib/ui/drawer";
+import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerOverlay, DrawerPortal, DrawerTrigger } from "@/lib/ui/drawer";
 
 export function Nav() {
 
@@ -14,7 +14,7 @@ export function Nav() {
 
     return (
         <div className="fixed w-full bg-white/60 backdrop-blur-xl select-none z-20 border-b">
-            <nav className="container mx-auto flex mt-6 mb-3 px-6 items-center" role="banner">
+            <nav className="container mx-auto flex mt-6 mb-5 px-6 items-center" role="banner">
                 <div className="flex items-center">
                     <Link to="/" className="brand-mark h-8 me-2 mt-1" aria-label="Q6 Technologies Logo"></Link>
                 </div>
