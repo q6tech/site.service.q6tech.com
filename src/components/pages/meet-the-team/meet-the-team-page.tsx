@@ -107,9 +107,9 @@ function Member({ name, title, email, image, description }: MemberProps) {
 
             <div className="grow px-6 prose flex flex-col prose-p:mt-0 prose-p:mb-2">
                 <h2 className="text-4xl font-normal mb-1 md:mb-0 text-center md:text-start mt-3 md:mt-0">{name}</h2>
-                <div className="flex flex-row md:flex-col justify-center">
+                <div className="flex justify-center md:justify-start">
                     <span>{title}</span>
-                    <span className="block md:hidden mx-2">•</span>
+                    <span className="mx-2">•</span>
                     <a href={`mailto:${email}`}>{email}</a>
                 </div>
                 <div className="mt-3 mb-3">
