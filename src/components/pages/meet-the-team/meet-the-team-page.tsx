@@ -98,9 +98,9 @@ type MemberProps = {
 
 function Member({ name, title, email, image, description }: MemberProps) {
     return (
-        <section className="w-full flex flex-col md:flex-row mb-6 items-center md:items-start">
+        <section className="w-full flex flex-col md:flex-row mb-9 items-center md:items-start relative">
 
-            <div className="shrink-0 w-32 h-32 rounded-xl border px-3 pt-3 bg-blue-100">
+            <div className="shrink-0 w-32 h-32 rounded-xl border px-3 pt-3 bg-purple-100">
                 <img className="w-full h-full" src={image.toString()} alt={`${name}'s headshot.`} />
             </div>
 
@@ -114,6 +114,10 @@ function Member({ name, title, email, image, description }: MemberProps) {
                 <div className="mt-3">
                     {description}
                 </div>
+            </div>
+
+            <div className="absolute hidden md:block bottom-0 right-0 h-32 w-32 border-purple-900 border-b-4 border-e-4">
+
             </div>
 
         </section>
