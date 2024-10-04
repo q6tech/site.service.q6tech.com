@@ -39,7 +39,7 @@ function Hero() {
                         <div className="mx-auto w-24 mt-5 h-1 bg-purple-900" />
                     </div>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 mb-12 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 mb-12 gap-3 px-3">
                         <ExpertiseCard name="API's" image={new URL("./assets/api.webp", import.meta.url)}>
                             <p>
                                 Ah, API's - the unsung heroes of the digital world. They're the behind-the-scenes magic that makes your favorite apps and services talk to each other seamlessly. But, let's be real, a poorly designed API can be a real party pooper.
