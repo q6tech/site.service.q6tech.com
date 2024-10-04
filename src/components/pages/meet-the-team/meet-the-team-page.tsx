@@ -73,6 +73,7 @@ export function MeetTheTeamPage() {
                 <h1 className="text-6xl font-normal mt-12 mb-3">
                     Meet the Team!
                 </h1>
+                <div className="mx-auto w-24 mt-5 h-1 bg-purple-900" />
                 <p>
                     Meet the small group of highly skilled engineers, with 40+ years of combined experience.
                 </p>
@@ -111,14 +112,12 @@ function Member({ name, title, email, image, description }: MemberProps) {
                     <span className="block md:hidden mx-2">•</span>
                     <a href={`mailto:${email}`}>{email}</a>
                 </div>
-                <div className="mt-3">
+                <div className="mt-3 mb-3">
                     {description}
                 </div>
             </div>
 
-            <div className="absolute hidden md:block bottom-0 right-0 h-32 w-32 border-purple-900 border-b-4 border-e-4">
-
-            </div>
+            <div className="absolute hidden md:block bottom-0 right-0 h-32 w-32 border-purple-900 border-b-4 border-e-4" />
 
         </section>
     )
