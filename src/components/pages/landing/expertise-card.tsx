@@ -7,7 +7,6 @@ export type ExpertiseCardProps = {
 
 export function ExpertiseCard({ name, image, children }: PropsWithChildren<ExpertiseCardProps>) {
     return (
-
         <section className="border rounded px-6 py-9 flex">
             <div className="basis-1/4">
                 <img className="w-full h-auto" src={image.toString()} aria-hidden />
