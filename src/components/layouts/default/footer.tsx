@@ -6,7 +6,7 @@ export function Footer() {
             <div className="w-full h-6 bg-white rounded-b-xl relative z-20">
                 <div className="block md:hidden mx-auto h-2 w-[100px] rounded-full bg-muted"></div>
             </div>
-            <div className="absolute bottom-0 right-0 left-0 h-64 z-0">
+            <div className="absolute bottom-0 right-0 left-0 h-64 z-0 pt-[calc(100lvh-100svh)]">
                 <div className="container mx-auto p-6 pt-12 flex h-full">
                     <div>
                         <p className="font-semibold">Q6 Technologies, LLC</p>
