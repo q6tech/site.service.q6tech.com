@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
-import { ScrollRestoration, useMatches, useOutlet } from "react-router-dom";
+import { useMatches, useOutlet } from "react-router-dom";
 import { RouteContextProps } from "../../pages/router";
 
 export function RootLayout() {
@@ -30,7 +30,6 @@ export function RootLayout() {
                 <title>{title}</title>
                 <meta property="og:title" content={title} />
             </Helmet>
-            <ScrollRestoration />
             {outlet}
         </>
     )
