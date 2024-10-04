@@ -4,35 +4,59 @@ import { Helmet } from "react-helmet-async";
 const members: MemberProps[] = [
     {
         name: "Ananth",
-        title: "Co-founder, Likes People",
+        title: "Co-founder",
         email: "ananth@q6tech.com",
         image: new URL("./assets/ananth.webp", import.meta.url),
         description: (
-            <p>
-                Lorem ipsum dolor sit amet consetetur sed enim sanctus sit veniam et sed. Duis nonumy justo voluptua nulla ipsum accusam. Duis odio sadipscing invidunt lorem gubergren sit est zzril vero eirmod voluptua voluptua. Ea aliquyam sea takimata invidunt. Nulla justo eos consetetur erat duo elitr ipsum ut vero sit voluptua gubergren dolor delenit sit et. Suscipit dolor erat aliquip et eirmod. Lorem duis ea lorem nonumy duo praesent kasd. Sit vero rebum ipsum diam invidunt dolor consetetur ut ut eum kasd dolor lorem ipsum.
-            </p>
+            <>
+                <p>
+                    Meet Ananth, our frontend mastermind with a whopping 14 years of experience under his belt! When he's not crushing it in the coding world, you can find him spiking volleyballs on the court or plotting his next move in Settlers of Catan (don't challenge him, trust us).
+                </p>
+                <p>
+                    But beware: there's one creature that can bring this tech titan to his knees - lizards! Keep those scaly friends at bay, and Ananth is your guy.
+                </p>
+                <p>
+                    As a recent dad, Ananth has leveled up in the game of life, and we couldn't be more stoked to have him on our team. Come for the coding expertise, stay for the Catan tips and dad jokes!
+                </p>
+            </>
         )
     },
     {
         name: "Drew",
-        title: "Co-founder, Saw Space Jesus",
+        title: "Co-founder",
         email: "drew@q6tech.com",
         image: new URL("./assets/drew.webp", import.meta.url),
         description: (
-            <p>
-                Lorem ipsum dolor sit amet voluptua dolor consetetur amet stet duo vero eu voluptua accusam dolores ipsum. Te stet eirmod dolor blandit sit gubergren invidunt veniam. Autem nonummy luptatum ut esse amet sanctus consetetur justo ut nulla consequat gubergren et gubergren et dolore est et. Sadipscing eos eos ea eu et ipsum ipsum amet eirmod dolor vero dolore at dolores duo magna dolore. Dolore sit sed. Amet ipsum no dolor vulputate sed volutpat et clita consetetur mazim et aliquam lorem ut.
-            </p>
+            <>
+                <p>
+                    Meet Drew, the pastor with a secret superpower: he's a backend engineering wizard with over 20 years of experience! When he's not guiding his flock or leading our team to victory, he's probably worrying about being seen with a pink drink in hand (don't worry, Drew, your secret is safe with us).
+                </p>
+                <p>
+                    As a father of two, Drew knows a thing or two about keeping it real, and his humility is the stuff of legend (we're pretty sure he's the only person who's ever apologized for being too good at their job). But don't let his humble demeanor fool you - Drew is a force to be reckoned with, and his leadership skills are simply divine.
+                </p>
+                <p>
+                    So if you need guidance, wisdom, or just a really solid backend solution, Drew's your guy. Just don't offer him a pink lemonade.
+                </p>
+            </>
         )
     },
     {
         name: "Mark",
-        title: "Co-founder, Likes Computers",
+        title: "Co-founder",
         email: "mark@q6tech.com",
         image: new URL("./assets/mark.webp", import.meta.url),
         description: (
-            <p>
-                Lorem ipsum dolor sit amet takimata aliquyam sed est ipsum dolores aliquyam aliquyam consequat consetetur odio. Takimata aliquyam ipsum et. Voluptua odio ad duo. Eirmod sit sadipscing imperdiet magna labore ullamcorper commodo est kasd option amet odio dolor sit eros. Nisl rebum soluta magna at at sed commodo ut accusam sanctus nonumy facer est sed soluta blandit. In clita sadipscing liber sit accusam ipsum nonumy erat ea takimata facilisis sanctus accusam.
-            </p>
+            <>
+                <p>
+                    Meet Mark, the DevOps master with a decade of experience under his belt! This full-stack phenom can tackle anything from frontend to backend, and even throws in some top-notch security expertise for good measure.
+                </p>
+                <p>
+                    But Mark's not just a one-trick pony - he's also a speed demon with a Rubik's cube, solving it in under 20 seconds (yes, we've timed him). We're pretty sure he's secretly a superhero, but so far, he's kept his cape hidden.
+                </p>
+                <p>
+                    When he's not saving the world one deploy at a time, Mark is probably planning for the future - and by that, we mean contemplating the impending arrival of mini-Marks (no kids yet, but we're sure they'll be coding prodigies when they arrive). For now, though, Mark's all about bringing his A-game to our team, and we're thrilled to have him on board!
+                </p>
+            </>
         )
     }
 ]
@@ -54,7 +78,7 @@ export function MeetTheTeamPage() {
                 </p>
             </header>
 
-            <article className="flex flex-wrap flex-col justify-center max-w-[65ch] mx-auto w-full">
+            <article className="flex flex-wrap flex-col justify-center max-w-[72ch] mx-auto w-full">
                 {members.map(x => (
                     <Member key={x.email} {...x} />
                 ))}
@@ -80,11 +104,13 @@ function Member({ name, title, email, image, description }: MemberProps) {
                 <img className="w-full h-full" src={image.toString()} alt={`${name}'s headshot.`} />
             </div>
 
-            <div className="grow px-6 prose flex flex-col">
+            <div className="grow px-6 prose flex flex-col prose-p:mt-0 prose-p:mb-2">
                 <h2 className="text-4xl font-normal mb-0">{name}</h2>
                 <span>{title}</span>
                 <a href={`mailto:${email}`}>{email}</a>
-                {description}
+                <div className="mt-3">
+                    {description}
+                </div>
             </div>
 
         </section>
