@@ -79,7 +79,7 @@ export function MeetTheTeamPage() {
                 </p>
             </header>
 
-            <article className="flex flex-wrap flex-col justify-center max-w-[72ch] mx-auto w-full">
+            <article className="grid grid-cols-1 lg:grid-cols-2">
                 {members.map(x => (
                     <Member key={x.email} {...x} />
                 ))}
