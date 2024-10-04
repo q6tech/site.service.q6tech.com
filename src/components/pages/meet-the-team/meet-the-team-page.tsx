@@ -98,16 +98,19 @@ type MemberProps = {
 
 function Member({ name, title, email, image, description }: MemberProps) {
     return (
-        <section className="w-full flex mb-6">
+        <section className="w-full flex flex-col md:flex-row mb-6 items-center md:items-start">
 
             <div className="shrink-0 w-32 h-32 rounded-xl border px-3 pt-3 bg-blue-100">
                 <img className="w-full h-full" src={image.toString()} alt={`${name}'s headshot.`} />
             </div>
 
             <div className="grow px-6 prose flex flex-col prose-p:mt-0 prose-p:mb-2">
-                <h2 className="text-4xl font-normal mb-0">{name}</h2>
-                <span>{title}</span>
-                <a href={`mailto:${email}`}>{email}</a>
+                <h2 className="text-4xl font-normal mb-1 md:mb-0 text-center md:text-start mt-3 md:mt-0">{name}</h2>
+                <div className="flex flex-row md:flex-col justify-center">
+                    <span>{title}</span>
+                    <span className="block md:hidden mx-2">•</span>
+                    <a href={`mailto:${email}`}>{email}</a>
+                </div>
                 <div className="mt-3">
                     {description}
                 </div>
