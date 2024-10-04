@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { FaPaperPlane, FaPeoplePulling } from "react-icons/fa6";
 import { TbMenu2 } from "react-icons/tb";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Button } from "@/lib/ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerOverlay, DrawerPortal, DrawerTrigger } from "@/lib/ui/drawer";
+import { Drawer, DrawerContent, DrawerOverlay, DrawerPortal, DrawerTrigger } from "@/lib/ui/drawer";
 
 export function Nav() {
 
@@ -62,27 +61,4 @@ function NavItems() {
             </li>
         </>
     );
-}
-
-function NavDrawer() {
-    return (
-        <Drawer>
-            <DrawerTrigger asChild>
-                <Button variant="outline">Open Drawer</Button>
-            </DrawerTrigger>
-            <DrawerContent>
-                <div className="mx-auto w-full max-w-sm">
-                    <div className="p-4 pb-0">
-
-                    </div>
-                    <DrawerFooter>
-                        <Button>Submit</Button>
-                        <DrawerClose asChild>
-                            <Button variant="outline">Cancel</Button>
-                        </DrawerClose>
-                    </DrawerFooter>
-                </div>
-            </DrawerContent>
-        </Drawer>
-    )
 }
