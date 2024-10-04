@@ -117,7 +117,7 @@ function Member({ name, title, email, image, description }: MemberProps) {
                 </div>
             </div>
 
-            <div className="absolute hidden md:block bottom-0 right-0 h-32 w-32 border-purple-900 border-b-4 border-e-4" />
+            <div className="absolute hidden md:block bottom-0 right-0 h-16 w-16 border-purple-900 border-b-4 border-e-4" />
 
         </section>
     )

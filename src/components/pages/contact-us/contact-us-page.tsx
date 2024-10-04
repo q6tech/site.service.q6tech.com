@@ -29,8 +29,8 @@ export function ContactUsPage() {
                     (hello@q6tech.com)
                 </p>
 
-                <div className="absolute hidden md:block top-0 left-0 h-20 w-20 border-purple-900 border-t-4 border-s-4" />
-                <div className="absolute hidden md:block bottom-0 right-0 h-20 w-20 border-purple-900 border-b-4 border-e-4" />
+                <div className="absolute hidden md:block top-4 left-4 h-10 w-10 border-purple-900 border-t-4 border-s-4" />
+                <div className="absolute hidden md:block bottom-4 right-4 h-10 w-10 border-purple-900 border-b-4 border-e-4" />
 
             </article>
 
