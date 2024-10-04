@@ -34,7 +34,7 @@
         "sri-dist": "posthtml -u posthtml-sri --posthtml-sri.basePath=dist/ dist/**/*.html",
         "lint": "eslint --max-warnings=0 src",
         "start": "yarn parcel:start",
-        "clean": "rimraf ./dist && rimraf ./.cache",
+        "clean": "rimraf ./dist && rimraf ./.parcel-cache",
         "build": "yarn clean && yarn parcel:build && yarn sri-dist",
         "shadcn": "shadcn"
     },
