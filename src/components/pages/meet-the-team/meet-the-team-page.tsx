@@ -10,7 +10,7 @@ const members: MemberProps[] = [
         description: (
             <>
                 <p>
-                    Meet Ananth, our frontend mastermind with a whopping 14 years of experience under his belt! When he's not crushing it in the coding world, you can find him spiking volleyballs on the court or plotting his next move in Settlers of Catan (don't challenge him, trust us).
+                    Meet Ananth, our frontend mastermind with a whopping 13 years of experience under his belt! When he's not crushing it in the coding world, you can find him spiking volleyballs on the court or plotting his next move in Settlers of Catan (don't challenge him, trust us).
                 </p>
                 <p>
                     But beware: there's one creature that can bring this tech titan to his knees - lizards! Keep those scaly friends at bay, and Ananth is your guy.
