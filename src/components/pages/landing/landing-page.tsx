@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { Link } from "react-router-dom";
 import { ExpertiseCard } from "./expertise-card";
 
@@ -32,9 +31,9 @@ function Hero() {
                     role="button">Contact Us</Link>
 
                 <div className="text-center prose mx-auto mb-6 mt-6">
-                    <h1 className="text-2xl font-normal mt-12 mb-3">
+                    <h2 className="text-2xl font-normal mt-12 mb-3">
                         What We Do
-                    </h1>
+                    </h2>
                     <div className="mx-auto w-24 mt-5 h-1 bg-purple-900" />
                 </div>
 
@@ -75,55 +74,29 @@ function Hero() {
                             Security is the secret sauce that takes your product from 'meh' to 'mission-critical'. We're your stealthy ninja warriors, protecting your users from the shadows and keeping the bad guys at bay.                        </p>
                     </ExpertiseCard>
                 </div>
-            </div>
-        </div>
-    )
-}
 
+                <div className="text-center prose mx-auto mb-6 mt-6">
+                    <h2 className="text-2xl font-normal mt-6 mb-3">
+                        Where We Do
+                    </h2>
+                    <div className="mx-auto w-24 mt-5 h-1 bg-purple-900" />
+                </div>
 
-function Areas() {
+                <div className="flex flex-col items-center">
+                    <div className="">
+                        <img className="w-full h-[512px]" src={new URL("./assets/map.svg", import.meta.url).toString()} alt="Map of the USA, showing a pin in the State of Texas." />
+                    </div>
+                    <div className="relative mt-6 p-12">
+                        <p className="prose text-center">
+                            We design and craft in Texas, USA.
+                            <br />
+                            All development is done in-house, no outsourcing here!
+                        </p>
 
-    const apiImg = new URL("./assets/api.webp", import.meta.url);
-    const databasesImg = new URL("./assets/databases.webp", import.meta.url);
-    const securityImg = new URL("./assets/security.webp", import.meta.url);
-    const storageImg = new URL("./assets/storage.webp", import.meta.url);
-    const websitesImg = new URL("./assets/websites.webp", import.meta.url);
-    const networkingImg = new URL("./assets/networking.webp", import.meta.url);
-
-    return (
-        <div className="mx-6 mt-12">
-            <div className="mx-3 mb-3 font-semibold text-gray-600">Expertise</div>
-            <div className="flex justify-center max-w-full">
-                <AreaCard image={apiImg} subTitle="API's" />
-                <AreaCard image={websitesImg} subTitle="Websites" />
-                <AreaCard image={databasesImg} subTitle="Databases" />
-                <AreaCard image={storageImg} subTitle="Storage" />
-                <AreaCard image={networkingImg} subTitle="Networking" />
-                <AreaCard image={securityImg} subTitle="Security" />
-            </div>
-        </div>
-    )
-}
-
-type AreaCardProps = {
-    image: URL,
-    subTitle: string
-} & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
-
-function AreaCard({ className, image, subTitle, ...props }: AreaCardProps) {
-    return (
-        <div className={clsx("h-48 w-32 border rounded-xl mx-3 relative overflow-hidden pointer-events-none select-none animate-fade-left", className)}
-            aria-label={subTitle}
-            {...props}>
-            <div className="absolute -top-6 -left-1/2 w-52 h-52">
-                <img src={image.toString()}></img>
-            </div>
-            <div className="absolute -top-6 -left-1/2 w-52 h-52">
-                <img src={image.toString()}></img>
-            </div>
-            <div className="absolute -bottom-5 -left-10 area-card-subtitle-bg" />
-            <div className="absolute bottom-4 left-0 w-full text-center font-semibold select-text">
-                {subTitle}
+                        <div className="absolute top-4 left-4 h-20 w-20 border-purple-900 border-t-4 border-s-4" />
+                        <div className="absolute bottom-4 right-4 h-20 w-20 border-purple-900 border-b-4 border-e-4" />
+                    </div>
+                </div>
             </div>
         </div>
     )
