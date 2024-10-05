@@ -15,9 +15,9 @@ export function ExpertiseCard({ name, image, children }: PropsWithChildren<Exper
                 <header className="mb-3">
                     <h2 className="text-3xl">{name}</h2>
                 </header>
-                <p className="prose">
+                <div className="prose">
                     {children}
-                </p>
+                </div>
             </div>
         </section>
     )
