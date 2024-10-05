@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
 import { Helmet } from "react-helmet-async";
+import { Member, MemberProps } from "./member";
 
 const members: MemberProps[] = [
     {
@@ -64,11 +64,9 @@ const members: MemberProps[] = [
 export function MeetTheTeamPage() {
     return (
         <div className="flex flex-col">
-
             <Helmet>
                 <meta name="robots" content="noindex" />
             </Helmet>
-
             <header className="text-center prose mx-auto mb-12">
                 <h1 className="text-6xl font-normal mt-12 mb-3">
                     Meet the Team!
@@ -78,47 +76,11 @@ export function MeetTheTeamPage() {
                     Meet the small group of highly skilled engineers, with 40+ years of combined experience.
                 </p>
             </header>
-
-            <article className="grid grid-cols-1 lg:grid-cols-2">
+            <article className="flex flex-wrap justify-center">
                 {members.map(x => (
                     <Member key={x.email} {...x} />
                 ))}
             </article>
-
         </div>
-    )
-}
-
-type MemberProps = {
-    name: string;
-    title: string;
-    email: string;
-    image: URL;
-    description: ReactNode;
-}
-
-function Member({ name, title, email, image, description }: MemberProps) {
-    return (
-        <section className="w-full flex flex-col md:flex-row mb-9 items-center md:items-start relative">
-
-            <div className="shrink-0 w-32 h-32 rounded-xl border px-3 pt-3 bg-purple-100">
-                <img className="w-full h-full" src={image.toString()} alt={`${name}'s headshot.`} />
-            </div>
-
-            <div className="grow px-6 prose flex flex-col prose-p:mt-0 prose-p:mb-2">
-                <h2 className="text-4xl font-normal mb-1 md:mb-0 text-center md:text-start mt-3 md:mt-0">{name}</h2>
-                <div className="flex justify-center md:justify-start">
-                    <span>{title}</span>
-                    <span className="mx-2">•</span>
-                    <a href={`mailto:${email}`}>{email}</a>
-                </div>
-                <div className="mt-3 mb-3">
-                    {description}
-                </div>
-            </div>
-
-            <div className="absolute hidden md:block bottom-0 right-0 h-16 w-16 border-purple-900 border-b-4 border-e-4" />
-
-        </section>
     )
 }
