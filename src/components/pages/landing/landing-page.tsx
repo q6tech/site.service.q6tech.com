@@ -41,10 +41,10 @@ function Hero() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 mb-12 gap-3">
                     <ExpertiseCard name="API's" image={new URL("./assets/api.webp", import.meta.url)}>
                         <p>
-                            Ah, API's - the unsung heroes of the digital world. They're the behind-the-scenes magic that makes your favorite apps and services talk to each other seamlessly. But, let's be real, a poorly designed API can be a real party pooper.
+                            API's - the unsung heroes of the digital world - are the behind-the-scenes magic that makes your favorite apps and services talk to each other seamlessly, but a poorly designed API can be a real party pooper.
                         </p>
                         <p>
-                            At Q6 Technologies, we're the API whisperers. Our passion is crafting APIs that are not only functional but also elegant, scalable, and secure. We believe that a well-designed API is not just a nicety, but a necessity for any business that wants to stay ahead of the curve.
+                            At Q6 Technologies, we're the API whisperers, crafting APIs that are not only functional but also elegant, scalable, and secure, because we believe that a well-designed API is not just a nicety, but a necessity for any business that wants to stay ahead of the curve.
                         </p>
                     </ExpertiseCard>
                     <ExpertiseCard name="Websites" image={new URL("./assets/websites.webp", import.meta.url)}>
@@ -52,28 +52,27 @@ function Hero() {
                             If eyes are the window to the soul, then websites are the gateway to API's. Websites are the first and last thing customers see.
                         </p>
                         <p>
-                            At Q6 Technologies, we believe that a great API is only as good as the website that uses it. That's why we're dedicated to crafting not only exceptional APIs but also stunning websites that bring your brand to life.
+                            A great API is only as good as the website that uses it. That's why we're on a mission to whip up not only amazing APIs, but also websites that make your brand do the happy dance.
                         </p>
                     </ExpertiseCard>
                     <ExpertiseCard name="Databases" image={new URL("./assets/databases.webp", import.meta.url)}>
                         <p>
-                            At Q6 Technologies, we're obsessed with quality in engineering - and that's especially true when it comes to databases. Our team of experts has spent years mastering the dark arts of database design, development, and optimization. We're talking query ninjas, indexing wizards, and data modeling masters.
+                            We're obsessed with quality in engineering, and databases are our sweet spot. Meet our team of experts - query ninjas, indexing wizards, and data modeling masters who have spent years perfecting the dark arts of database design, development, and optimization.
                         </p>
                     </ExpertiseCard>
                     <ExpertiseCard name="Networking" image={new URL("./assets/networking.webp", import.meta.url)}>
                         <p>
-                            At Q6 Technologies, we know that a strong network is the backbone of any successful operation. That's why our team is dedicated to designing, building, and maintaining networks that are as robust as they are reliable. Existing networks beware, we also can also make existing problems go away.
+                            A strong network is the backbone of any successful operation. That's why our team is dedicated to crafting networks that are as robust as they are reliable. Got network woes? We're the heroes you need - we'll design, build, and maintain a network that just works, or rescue your existing one from its troubles.
                         </p>
                     </ExpertiseCard>
                     <ExpertiseCard name="Storage" image={new URL("./assets/storage.webp", import.meta.url)}>
                         <p>
-                            At Q6 Technologies, we're all about "Quality in Engineering" - and when it comes to storage, we're the pros you want on your team. Our expertise in storage solutions like Ceph is unmatched, and we're not afraid to geek out about it.
+                            Quality in Engineering is our mantra, and storage is our superpower. We're the pros you want on your team, with unmatched expertise in solutions like Ceph. Warning: we might just geek out about it - we can't help ourselves
                         </p>
                     </ExpertiseCard>
                     <ExpertiseCard name="Security" image={new URL("./assets/security.webp", import.meta.url)}>
                         <p>
-                            At Q6 Technologies, we know that security is the secret ingredient that makes your product go from "meh" to "mission-critical". Think of us as your ninja warriors, stealthily protecting your users from the shadows.
-                        </p>
+                            Security is the secret sauce that takes your product from 'meh' to 'mission-critical'. We're your stealthy ninja warriors, protecting your users from the shadows and keeping the bad guys at bay.                        </p>
                     </ExpertiseCard>
                 </div>
             </div>
