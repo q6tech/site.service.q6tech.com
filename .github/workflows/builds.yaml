@@ -26,7 +26,7 @@ jobs:
       - name: Setup Index Now
         run: |
           echo "${{ secrets.INDEXNOW_KEY }}" > "./dist/${{ secrets.INDEXNOW_KEY }}.txt"
-        if: github.ref_name == 'master'
+        if: startsWith(github.ref, 'refs/tags/v')
       - uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -37,7 +37,7 @@ jobs:
     name: Deploy to Rabbit Edge
     needs:
       - build
-    if: github.ref_name == 'master'
+    if: startsWith(github.ref, 'refs/tags/v')
     concurrency: rabbit-edge
     environment:
       name: rabbit-edge
@@ -64,7 +64,7 @@ jobs:
     name: Update IndexNow
     needs:
       - deploy-rabbit-edge
-    if: github.ref_name == 'master'
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
     steps:
       - uses: bojieyang/indexnow-action@v2
